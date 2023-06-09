@@ -1,11 +1,20 @@
 
 class Reduce{
-    public num(int n){
+    public int numberOfSteps(int num){
+        int steps = 0;
 
-           
-        for (i = 0; i < n; i++){
-            int evenNumber = i % 2 == 0;
-            int oddNumber = valueOfIndex(i) - 1;
+        while( num > 0){
+            if (num % 2 == 0){
+                num /=2;
+            }
+            else {
+                num--;
+            }
+
+            steps++;
+
         }
+
+        return steps;
     }
 }
